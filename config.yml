@@ -4,8 +4,10 @@ elastic:
   maxResultsSize: 10 # size for search results
   
   # tags used to wrap the text search words that matches with the search
-  preTags: "<strong>"
-  postTags: "</strong>"
+  preTags: "*"
+  postTags: "*"
+  
+  highlightFragmentSize: 100
 
 drive:
   folderId: "" # google drive folder id
@@ -13,3 +15,6 @@ drive:
 
 files:
   sourceFolder: "files/" # local folder to read files to index
+
+telegram:
+  botToken: ""

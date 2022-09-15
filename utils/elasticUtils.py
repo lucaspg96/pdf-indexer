@@ -90,7 +90,7 @@ def search_documents(search_text):
         },
         "pre_tags": config.get("preTags","<strong>"),
         "post_tags": config.get("postTags","</strong>"),
-        "fragment_size": 300
+        "fragment_size": config.get("highlightFragmentSize",300)
     }
 
     fields = ["file","page"]

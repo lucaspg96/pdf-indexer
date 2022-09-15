@@ -6,6 +6,7 @@ from tqdm import tqdm
 def text_fix(text):
     return text\
             .replace(" -\n","")\
+            .replace("-\n","")\
             .replace("\n", " ")
 
 def process_file(file):
