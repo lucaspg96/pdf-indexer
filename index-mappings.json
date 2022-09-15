@@ -1,0 +1,8 @@
+{
+    "properties": {
+      "content": {
+        "type": "text",
+        "analyzer": "rebuilt_brazilian"
+      }
+    }
+}

@@ -1,0 +1,6 @@
+google-api-python-client==2.61.0
+google-auth-httplib2==0.1.0
+google-auth-oauthlib==0.5.3
+elasticsearch==8.4.1
+PyPDF2==2.10.8
+tqdm

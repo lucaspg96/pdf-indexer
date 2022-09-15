@@ -1,0 +1,15 @@
+elastic:
+  host: "http://localhost:9200" # elasticsearch address
+  indexName: "documents" # index that will store the texts
+  maxResultsSize: 10 # size for search results
+  
+  # tags used to wrap the text search words that matches with the search
+  preTags: "<strong>"
+  postTags: "</strong>"
+
+drive:
+  folderId: "" # google drive folder id
+  downloadPath: "files/" # local folder to save the downloaded files
+
+files:
+  sourceFolder: "files/" # local folder to read files to index
