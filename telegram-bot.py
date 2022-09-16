@@ -13,11 +13,16 @@ logger = logging.getLogger(__name__)
 def start(update: Update, context: CallbackContext) -> None:    
     user = update.effective_user
     update.message.reply_html(
-        f"Bem vindo, {user.mention_html()}! Sou o ???"
+        f"Bem vindo, {user.mention_html()}! Me chamo Cid, sou o mestre dos registros da Tormenta." +\
+        " Se quiser me perguntar algo, basta escrever /search ou /buscar e informar o que deseja saber."
     )
 
 def search(update: Update, context: CallbackContext) -> None:
     search = " ".join(update.message.text.split(" ")[1:])
+    if len(search.strip()) == 0:
+        update.message.reply_text("Perdão, mas preciso que você diga o que precisa saber.")
+        return
+
     all_results = elasticUtils.search_documents(search)
 
     if len(all_results) == 0:

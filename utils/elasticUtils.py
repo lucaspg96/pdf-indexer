@@ -103,9 +103,12 @@ def search_documents(search_text):
     results_by_file = {}
     for result in results:
         file = result["_source"]["file"]
+        if not "highlight" in result:
+            continue
+
         if not file in results_by_file:
             results_by_file[file] = []
-        
+    
         results_by_file[file].append({
             "page":result["_source"]["page"],
             "highlight": result["highlight"]['content']}
